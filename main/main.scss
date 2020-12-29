@@ -1,0 +1,618 @@
+* {
+    transition: .2s ease-in-out;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+
+    .dream {
+        &__txt {
+            text-align: center;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 32px;
+            padding: 120px 0 35px 0;
+        }
+
+        &__images {
+            display: flex;
+            justify-content: center;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            .dream-content {
+                border-radius: 5px;
+                width: 22%;
+                height: 400px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 0px 20px;
+
+                .content-btn {
+                    width: 70px;
+                    height: 20px;
+                    background: #FF4E50;
+                    border-radius: 40px;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 10px;
+                    line-height: 12px;
+                    letter-spacing: 2px;
+                    color: #FFFFFF;
+                    @include center;
+
+                    &:hover {
+                        background-color: rgb(247, 153, 125);
+                        cursor: pointer;
+                    }
+
+
+                }
+
+                .content-title {
+                    padding: 30px 0;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 26px;
+                    color: #FFFFFF;
+                }
+
+
+
+                .content-subtitle {
+                    padding: 5px 0 10px 0;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: #E3E3E3;
+                }
+            }
+
+            .dream-content:nth-child(1) {
+                background-image: url(../img/dreamshar_img/Step3.jpg);
+            }
+
+            .dream-content:nth-child(2) {
+                background-image: url(../img/dreamshar_img/Step2.jpg);
+                margin-left: 20px;
+            }
+
+            .dream-content:nth-child(3) {
+                background-image: url(../img/dreamshar_img/Step1.jpg);
+                margin-left: 20px;
+            }
+        }
+    }
+
+}
+
+// MAIN TEIL ZWEI//
+.teil {
+    margin-top: 69px;
+
+    .users {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__teiltitle {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 32px;
+            color: #444444;
+            padding: 0 0 10px 0;
+        }
+
+        .people-btn {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FF4E50;
+            width: 180px;
+            height: 40px;
+            margin: 0 auto;
+            border: 2px solid #FF4E50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            box-sizing: border-box;
+            margin-top: 36px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(253, 251, 249);
+                transform: scale(1.1);
+            }
+        }
+
+        .people {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            &__user {
+                max-width: 221px;
+                margin-bottom: 30px;
+
+                &:hover {
+                    background-color: rgb(140, 193, 197);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+
+                img {
+                    padding: 0 0 17px 0;
+                }
+
+                .name {
+                    padding: 0 0 12px 0;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                .info {
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: lightslategray;
+                }
+            }
+
+        }
+    }
+
+    .discovery-txt {
+        text-align: center;
+        margin-top: 95px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        padding: 0 0 35px 0;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+            "eins  zwei drei "
+            "vier fuenf fuenf"
+            "sechs sechs sieben";
+        height: 1031px;
+        grid-gap: 10px;
+        max-width: 941px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+
+        .eins,
+        .zwei,
+        .drei,
+        .vier,
+        .fuenf,
+        .sechs,
+        .sieben {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+        }
+
+        .eins {
+            grid-area: eins;
+            background-image: url(../img/discoverimg/Sport.jpg);
+        }
+
+        .zwei {
+            grid-area: zwei;
+            background-image: url(../img/discoverimg/Healath.jpg);
+        }
+
+        .drei {
+            grid-area: drei;
+            background-image: url(../img/discoverimg/Extreme.jpg);
+        }
+
+        .vier {
+            grid-area: vier;
+            background-image: url(../img/discoverimg/Games.jpg);
+        }
+
+        .fuenf {
+            grid-area: fuenf;
+            background-image: url(../img/discoverimg/Culture.jpg);
+        }
+
+        .sechs {
+            grid-area: sechs;
+            background-image: url(../img/discoverimg/relax.jpg);
+        }
+
+        .sieben {
+            grid-area: sieben;
+            background-image: url(../img/discoverimg/travel.jpg);
+        }
+    }
+
+
+    .block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 27px;
+        color: white;
+    }
+
+    .bottom-title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        padding: 89px 0 43px 0;
+    }
+
+    .bottom-subtitle {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 14px;
+        color: #666666;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    .checken {
+        text-align: center;
+
+        input {
+            width: 299px;
+            height: 40px;
+            padding-left: 10px;
+            border: 0.2px solid rgb(233, 233, 233);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .check {
+            width: 172.12px;
+            height: 40px;
+            background: #FF4E50;
+            border-radius: 40px;
+            color: white;
+            border: none;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            outline: none;
+            margin-left: 10px;
+
+            &:hover {
+                background-color: rgb(167, 114, 114);
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+}
+
+.line {
+    width: 100%;
+    background-color: red;
+    height: 2px;
+    margin: 100px 0 40px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+
+    p {
+
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #444444;
+        padding: 0 0 11px 0;
+    }
+
+    &__logotip {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FF4E50;
+    }
+
+    &__company {
+        padding: 0 0 36px 0;
+
+        ul li {
+            list-style: none;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 26px;
+            color: #999999;
+
+
+        }
+    }
+
+    &__designed {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        color: #CCCCCC;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h6{
+            margin-bottom: 7px;
+        }
+        .img{
+            width: 110px;
+            height: 24px;
+        }
+    }
+}
+
+@media all and (max-width:992px) {
+    .main {
+        .dream {
+            &__images {
+                .dream-content {
+                    width: 32%;
+                }
+            }
+        }
+    }
+}
+
+// TABLET//
+@media all and (max-width:768px) {
+    .main {
+        .dream {
+            &__txt {
+                padding-top: 94px;
+                font-size: 22px;
+                line-height: 27px;
+            }
+
+            &__images {
+                .dream-content {
+                    width: 36%;
+                    height: 250px;
+                    padding: 0 10px;
+
+                    .content-title {
+                        line-height: 14px;
+                        font-size: 18px;
+                    }
+                }
+
+                .dream-content:nth-child(2) {
+                    margin-left: 10px;
+                }
+
+                .dream-content:nth-child(3) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .teil {
+        .users {
+            .people {
+                grid-template-columns: repeat(2, 1fr);
+
+                .order1 {
+                    order: 1;
+                }
+
+                .order2 {
+                    order: 3;
+                }
+
+                .order3 {
+                    order: 2;
+                }
+
+                .order4 {
+                    order: 4;
+                }
+            }
+
+            &__teiltitle {
+                font-size: 22px;
+                line-height: 27px;
+            }
+        }
+
+        .bottom-title {
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+
+}
+
+// MOBILE//
+@media all and (max-width:613px) {
+    .main {
+        .dream {
+            &__txt {
+                font-size: 20px;
+                padding: 34px 0 15px 0;
+            }
+
+            .content-title {
+                padding: 10px 0 10px 0;
+            }
+
+            &__images {
+
+                flex-direction: column;
+                align-items: center;
+
+                .dream-content {
+                    width: 75%;
+                    height: 300px;
+                    background-position: 50% 60%;
+
+                    .content-title {
+                        padding: 20px 0 10px 0;
+                    }
+                }
+
+                .dream-content:nth-child(2) {
+                    margin: 10px 0;
+                }
+
+                .dream-content:nth-child(3) {
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+
+    .teil {
+        .users {
+            .people {
+                grid-template-columns: 1fr;
+                margin-top: 10px;
+            }
+
+            .people-btn {
+                width: 280px;
+            }
+        }
+
+        .container {
+            margin: 5px 5px;
+            display: flex;
+            flex-direction: column;
+            height: 1200px;
+
+            .one,
+            .two,
+            .three,
+            .four,
+            .five,
+            .six,
+            .seven {
+                height: 1100px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+
+            }
+
+            .block {
+                font-size: 14px;
+                line-height: 24px;
+                height: 200px;
+            }
+
+
+
+
+        }
+
+        .bottom-title {
+            padding: 35px 0 9px 0;
+        }
+
+        .bottom-subtitle {
+            padding-bottom: 15px;
+        }
+
+        .checken {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                width: 280px;
+                margin-bottom: 10px;
+            }
+
+            .check {
+                width: 280px;
+                margin: 0;
+            }
+        }
+
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        &__logotip{
+            padding-bottom: 13px;
+        }
+        &__company{
+            padding: 0 0 14px 0;
+        }
+        &__designed{
+            .img{
+                margin: 0 auto;
+                padding: 0 0 22px 0;
+            }
+        }
+    }
+
+
+}

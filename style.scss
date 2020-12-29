@@ -1,0 +1,180 @@
+// FONTS//
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat/Montserrat-SemiBold.ttf) format("opentype");
+    ;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto/Roboto-Light.ttf) format("opentype");
+    ;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// MIXIN//
+@mixin logo {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+@mixin signin_btn {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 37px;
+    color: #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+// HEADER//
+.header {
+    background-image: url(img/Backgroundimage/header.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+
+    //  ВЕРХНЯ ЧАСТИНА ШАПКИ//
+    &__content {
+        width: 67%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 46px 0 153px 0;
+
+        .logo {
+            @include logo;
+        }
+
+        .signin {
+            display: flex;
+            @include signin_btn;
+
+            &__link {
+                .href {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .btn {
+            border: 2px solid #FFFFFF;
+            border-radius: 40px;
+            width: 90px;
+            height: 36px;
+            box-sizing: border-box;
+            @include center;
+            margin-left: 17px;
+
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: black;
+            }
+        }
+    }
+
+    // НИЖНЯ ЧАСТИНА ШАПКИ І ЗВГОЛОВОК//
+    .title {
+        text-align: center;
+
+        &__main {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 52px;
+            line-height: 63px;
+            max-width: 470px;
+            height: 126px;
+            color: white;
+            margin: 0 auto;
+        }
+
+        &__subtitle {
+            padding: 28px 0 45px 0;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 24px;
+            color: white;
+        }
+
+        &__button {
+            width: 225px;
+            height: 40px;
+            background: #FF4E50;
+            border-radius: 40px;
+            @include signin_btn;
+            border: none;
+
+            &:hover {
+                background-color: rgb(255, 143, 79);
+            }
+        }
+    }
+}
+
+// MEDIA//
+@media all and (max-width:500px) {
+    .header {
+        &__content {
+            flex-direction: column;
+            padding: 0 0 10px 0;
+
+            .logo {
+                order: 2;
+                text-align: center;
+            }
+
+            .signin {
+                margin: 0 auto;
+                padding: 20px 0 170px 0;
+            }
+        }
+
+        .title {
+            &__main {
+                font-size: 32px;
+                line-height: 37px;
+                height: 60px;
+            }
+
+            &__subtitle {
+                width: 280px;
+                margin: 0 auto;
+                font-size: 18px;
+                padding: 28px 0 25px 0;
+            }
+
+            &__button {
+                width: 280px;
+            }
+        }
+
+    }
+}
+
+// MAIN//
